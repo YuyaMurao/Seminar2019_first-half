@@ -1,0 +1,6 @@
+$(function(){
+    $("ul.nav li").click(function(){
+      $("ul.nav li.selected").removeClass("selected");
+      $(this).addClass("selected");
+    });
+});

@@ -1,0 +1,27 @@
+/* 卒論/修論ページで使用する部分 */
+
+.list {
+    margin: 10px;
+}
+
+.list_text {
+    margin: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin: 0px;
+    text-indent: 0em;
+}
+
+p.title {
+    font-size: 24px;
+}
+
+p.l_text {
+    margin: 0 20px;
+}
+
+p.l_text_only {
+    margin: 0px;
+}

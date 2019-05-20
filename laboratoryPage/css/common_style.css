@@ -1,0 +1,99 @@
+/* 共通で使用する部分 */
+
+
+/* コンテンツ */
+
+.content {
+    margin: 100px auto;
+    width: 65vw;
+}
+
+.mainContents {
+    display: inline-block;
+    font-size: 24px;
+}
+
+
+/* 見出し */
+
+.headline {
+    position: relative;
+    font-weight: normal;
+    font-size: 32px;
+    background-color: #68CFC3;
+    color: #fcf8e0;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 0px;
+}
+
+
+/* 見出し背景デザイン */
+
+.headline:before {
+    content: '';
+    height: 110%;
+    width: 3px;
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: -3px;
+    margin: auto;
+    background-color: #fcf8e0;
+    transform: rotate(3deg);
+}
+
+.headline:after {
+    content: '';
+    height: 116%;
+    width: 3px;
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: -6px;
+    margin: auto;
+    background-color: #fcf8e0;
+    transform: rotate(-15deg);
+}
+
+
+/* 本文 */
+
+.text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+p {
+    font-size: 24px;
+    margin: 5px 0px 5px 50px;
+    line-height: 2;
+    display: block;
+    text-indent: 1em;
+}
+
+
+/* テーブル */
+
+table {
+    margin: 5px 0px 5px 50px;
+}
+
+td.text_title {
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    padding: 3px;
+    width: auto;
+}
+
+td.colon {
+    text-align: left;
+    padding: 0px;
+}
+
+td.text_content {
+    text-align: left;
+    padding: 3px;
+}
+
+
+/* コンテンツここまで */

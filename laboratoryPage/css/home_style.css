@@ -1,0 +1,112 @@
+/* トップページで使用する部分 */
+
+
+/*お知らせ*/
+
+.newslist {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.msr_newslist04 {
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.msr_newslist04 li {
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+    list-style: none;
+}
+
+.msr_newslist04 li a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #000000;
+    display: table;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    width: 100%;
+}
+
+.msr_newslist04 li a:hover {
+    text-decoration: none;
+    background: #EEEEEE;
+}
+
+.msr_newslist04 li div {
+    padding-bottom: 10px;
+    width: 144px;
+}
+
+.msr_newslist04 li p {
+    vertical-align: middle;
+}
+
+
+/* 時間の設定 */
+
+.msr_newslist04 li time {
+    display: table-cell;
+    vertical-align: top;
+    width: 90px;
+}
+
+
+/* カテゴリの設定 */
+
+.msr_newslist04 li .cat01,
+.msr_newslist04 li .cat02 {
+    background-color: #000000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: table-cell;
+    color: #FFFFFF;
+    font-size: 10px;
+    padding: 0 2px;
+    text-align: center;
+    width: 70px;
+}
+
+p.cat01,
+p.cat02 {
+    text-indent: 0em;
+}
+
+.msr_newslist04 li .cat02 {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+.newsChar {
+    font-size: 48px;
+    text-align: center;
+}
+
+
+/* スクロール表示 */
+
+#scroll {
+    height: 400px;
+    overflow: auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background: #fffff7;
+    border-radius: 6px;
+}
+
+
+/*お知らせここまで*/

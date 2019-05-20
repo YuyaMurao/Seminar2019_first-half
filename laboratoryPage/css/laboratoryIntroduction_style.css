@@ -1,0 +1,70 @@
+/* 研究室紹介ページで使用する部分 */
+
+
+/* テーブル */
+
+td.text_title {
+    width: 100px;
+}
+
+td.l_text_title {
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    padding: 3px;
+    width: 100px;
+    vertical-align: top;
+}
+
+td.l_text_content {
+    padding: 3px;
+}
+
+
+/* リストをアイコンに変える */
+
+.listIcon1 {
+    background: url(../image/nikukyu1.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 30px;
+    list-style: none;
+    padding-left: 50px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+}
+
+.listIcon2 {
+    background: url(../image/nikukyu2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 30px;
+    list-style: none;
+    padding-left: 50px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+}
+
+.listIcon3 {
+    background: url(../image/nikukyu3.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 25px;
+    list-style: none;
+    padding-left: 50px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+}
+
+.listIcon4 {
+    background: url(../image/nikukyu4.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 25px;
+    list-style: none;
+    padding-left: 50px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+}
+
+
+/* リストをアイコンに変える　ここまで */

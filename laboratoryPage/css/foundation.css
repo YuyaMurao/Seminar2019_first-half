@@ -1,0 +1,121 @@
+/* 基礎となる部分とヘッダーとフッターのデザイン */
+
+html {
+    min-height: 100vh;
+    position: relative;
+}
+
+body {
+    margin: 0px;
+    /* background-color: #FFFBD5; */
+    background-color: #fcf8e0;
+    width: 100%;
+}
+
+header {
+    background: #F6D580;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+footer {
+    background: #F6D580;
+    bottom: 0px;
+    width: 100%;
+    height: 24px;
+    text-align: right;
+    position: absolute;
+}
+
+
+/*画像*/
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img.titleLogo {
+    width: 20vw;
+}
+
+
+/* ナビゲーションバー */
+
+.nav {
+    padding: 0px;
+    background: #F6D580;
+    width: 100%;
+    list-style: none;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    table-layout: fixed;
+}
+
+.nav li {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fcf8e0;
+    display: inline-block;
+    font-size: 1.5vw;
+}
+
+.nav li:hover {
+    background-color: #EDAD0B;
+    transition: 0.4s;
+}
+
+.nav_item_selected {
+    background-color: #F0BA32;
+}
+
+.nav_item_selected:hover {
+    background-color: #EDAD0B;
+    transition: 0.4s;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    table-layout: fixed;
+    display: block;
+}
+
+.nav_item {
+    font-size: 1.5vw;
+    /* display: table; */
+}
+
+
+/* ページ上部へのボタン */
+
+#page-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    font-size: 77%;
+}
+
+#page-top a {
+    background: #F0BA32;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.801);
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+
+#page-top a:hover {
+    text-decoration: none;
+    background: #EDAD0B;
+}

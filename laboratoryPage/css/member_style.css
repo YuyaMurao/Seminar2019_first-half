@@ -1,0 +1,22 @@
+/* メンバーページで使用する部分 */
+
+
+/*画像*/
+
+.photo {
+    display: inline-block;
+}
+
+img.teacherPhoto {
+    width: 8vw;
+    margin: 10px 20px 10px 10px;
+}
+
+
+/* 区切り線 */
+
+.hr_style {
+    border-top: 2px dashed #68CFC3;
+    border-bottom: 1px dashed #fff;
+    width: 65vw;
+}
