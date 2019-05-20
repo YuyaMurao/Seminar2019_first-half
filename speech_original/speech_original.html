@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>speech</title>
+</head>
+
+<body>
+    <H2>Youtube音声認識検索</H2>
+    <button id="button">認識スタート</button>
+    <div id="content"></div>
+    <script>
+        'use strict'; {
+            const button = document.getElementById('button');
+            console.log(button)
+            const searchURL = "https://www.youtube.com/results?search_query=";
+            const content = document.getElementById('content');
+            const speech = new webkitSpeechRecognition();
+            speech.lang = 'ja-JP';
+
+            button.addEventListener('click', function() {
+                button.disabled = true;
+                button.textContent = '話してください';
+                speech.start();
+
+            });
+
+            speech.onresult = function(e) {
+
+                speech.stop();
+
+                if (e.results[0].isFinal) {
+                    var text = e.results[0][0].transcript;
+                    const URL = searchURL + text;
+                    console.log(e);
+                    console.log(text);
+                    console.log(URL);
+                    content.innerHTML += '<div><a href="' + URL + ' " target="_blank ">' + text + 'の検索結果</a> <div>';
+                }
+            }
+            speech.onend = function() {
+                button.disabled = false;
+            };
+            speech.onsoundstart = function() {
+                button.textContent = '認識中';
+            };
+
+            speech.onsoundend = function() {
+                button.textContent = '続けて認識スタート';
+            };
+
+
+        }
+    </script>
+</body>
+
+</html>
