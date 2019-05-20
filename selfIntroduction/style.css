@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+body{
+    text-align:center;
+    background-color:rgb(229, 255, 189);
+}
+
+#wrap{
+    width:450px;
+    margin:0 auto;
+    text-align:center;
+    border:solid 1px #333;
+    background-color:#add8e6;
+    font-family: "ＭＳ Ｐゴシック",sans-serif;
+}
+
+#wrap2{
+    width:500px;
+    margin:0 auto;
+    text-align:center;
+    border:solid 1px #333;
+    background-color:#add8e6;
+    font-family: "ＭＳ Ｐゴシック",sans-serif;
+}
+
+#head {
+    padding:10px;
+    border-bottom:solid 1px #333;
+}
+
+#navi {
+    border-bottom:solid 1px #333;
+    text-align:left;
+    background-color:#add8e6;
+    font-style: italic;
+}
+
+.post {
+    padding:10px;
+    text-align:left;
+    color:green;
+    background-color:#add8e6;
+}
+
+.post2 {
+    padding:10px;
+    text-align:left;
+    color:blue;
+    background-color:#add8e6;
+}
+
+.post3 {
+    padding:10px;
+    text-align:left;
+    color:rgb(199, 81, 81);
+    background-color:#add8e6;
+}
+
+.post4 {
+    padding:10px;
+    text-align:left;
+    color:teal;
+    background-color:#add8e6;
+}
+
+#foot {
+    border-top:solid 1px #333;
+    text-align:center;
+    padding:10px;
+    background-color:#add8e6;
+}
+
+.source{
+    color:#ff3343;
+    border-bottom:solid 1px #333;
+}
+
+/*下記はhttps://copypet.jp/1027/ よりコピペ*/
+.cp_tab *, .cp_tab *:before, .cp_tab *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_tab {
+	margin: 1em auto;
+}
+.cp_tab > input[type='radio'] {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: none;
+	-webkit-appearance: none;
+	        appearance: none;
+	display: none;
+}
+.cp_tab .cp_tabpanel {
+	display: none;
+}
+.cp_tab > input:first-child:checked ~ .cp_tabpanels > .cp_tabpanel:first-child,
+.cp_tab > input:nth-child(3):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(2),
+.cp_tab > input:nth-child(5):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(3),
+.cp_tab > input:nth-child(7):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(4),
+.cp_tab > input:nth-child(9):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(5),
+.cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6) {
+	display: block;
+}
+.cp_tab > label {
+	position: relative;
+	display: inline-block;
+	padding: 15px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-bottom: 0;
+}
+.cp_tab > label:hover,
+.cp_tab > input:focus + label {
+	color: #0066cc;
+}
+.cp_tab > input:checked + label {
+	margin-bottom: -1px;
+	border-color: #00462d;
+	border-bottom: 1px solid #add8e6;/*背景色と同じ*/
+	border-radius: 6px 6px 0 0;
+}
+.cp_tab .cp_tabpanel {
+	padding: 0.5em 1em;
+	border-top: 1px solid #00462d;
+}
+@media (max-width: 480px) {
+	.cp_tab {
+		width: 100%;
+		font-size: 0.8em;
+	}
+	.cp_tab label {
+		padding: 0.5em;
+	}
+}
+/*コピペここまで*/
+
+.img{
+    padding:0px;
+    width:0px;
+    width:150px;
+    height:150px;
+    position: absolute; top:40px; left:250px
+}
+
+.cp_tabpanel{
+    position: relative;
+}
+
+.post5{
+    text-align:left;
+}
+
+.post6{
+    text-align:left;
+}
+
+.post7{
+    text-align:left;
+}
+
+.post8{
+    text-align:left;
+}
+
+.game{
+    padding:5px;
+}
+
+.post9{
+    text-align:left;
+}
+
+.certificate{
+    padding:5px;
+}
+
+.post10{
+    text-align:left;
+}
+
+.lang{
+    padding:5px;
+}

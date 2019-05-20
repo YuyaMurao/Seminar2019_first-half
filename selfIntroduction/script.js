@@ -1,0 +1,3 @@
+object.onmouseover = function(){
+    
+  };
