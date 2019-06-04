@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat_original</title>
+
+    <style>
+        body {
+            /* margin: 0 auto; */
+            text-align: center;
+            background-color: #CBE6F3;
+        }
+        
+        #content {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            width: 30%;
+        }
+        
+        ul {
+            background-color: #EEF5D3;
+            list-style: none;
+            padding: 0;
+            overflow: auto;
+            height: 70vh;
+            margin: 0;
+        }
+        
+        li {
+            margin: 10px;
+        }
+        
+        .icon {
+            text-align: left;
+        }
+        
+        .name {
+            font-size: 10px;
+            text-align: left;
+        }
+        
+        .text {
+            font-size: 16px;
+            word-wrap: break-word;
+        }
+        
+        .time {
+            text-align: right;
+        }
+        
+        .form {
+            display: inline-block;
+            text-align: left;
+            border: solid 1px #000000;
+            margin: 10px;
+        }
+        
+        .msg_main {
+            border-bottom: solid 1px green;
+        }
+        
+        #titlemsg {
+            border-bottom: solid 1px black;
+        }
+        
+        .chat {
+            text-align: center;
+        }
+        
+        .deletebutton {
+            display: block;
+            margin: 0 0 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+        <div id="titlemsg">
+            <h2>メッセージ</h2>
+        </div>
+        <div id="chat">
+            <ul>
+                <div id="output"></div>
+            </ul>
+        </div>
+        <div class="form">
+            <div>
+                名前：<input type="text" id="username" value="">
+            </div>
+            <div>
+                内容：<textarea id="text" rows="5"></textarea>
+                <button id="send">send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAA40QVz5hLlOze6rE2FAPsrRVHYaNg4PE",
+            authDomain: "chatsample1-d5a84.firebaseapp.com",
+            databaseURL: "https://chatsample1-d5a84.firebaseio.com",
+            projectId: "chatsample1-d5a84",
+            storageBucket: "chatsample1-d5a84.appspot.com",
+            messagingSenderId: "984491803842",
+            appId: "1:984491803842:web:75a5abbed042c9c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //データベースの読み書きの準備
+        const newPostRef = firebase.database();
+        const room = "room1";
+
+        const send = document.getElementById("send");
+        const username = document.getElementById("username");
+        const text = document.getElementById("text");
+        const output = document.getElementById("output");
+        const deletebutton = document.getElementsByClassName("deletebutton");
+
+        //読み込み処理
+        newPostRef.ref(room).on("child_added", function(data) {
+            const v = data.val(); //データ取得
+            const k = data.key; //ユニークkey取得
+            let str = "";
+            str += '<li class="list" id ="list' + k + '">'
+            str += '<div id="' + k + '" class="msg_main">'
+                // str += '<div class="deletebutton">×</div>'
+            str += '<button class = "deletebutton" onClick="deletemsg()" > × </button>'
+            str += '<div class="msg_left">';
+            str += '<div class="icon"><img src="photo/nikukyu1.png" alt="" class="icon ' + v.username + '" width="30"></div>';
+            str += '<div class="msg">';
+            str += '<div class="name">' + v.username + '</div>';
+            str += '<div class="text">' + v.text + '</div>';
+            str += '</div>';
+            str += '</div>';
+            str += '<div class="msg_right">';
+            str += '<div class="time">' + v.time + '</div>';
+            str += '</div>';
+            str += '</div>';
+            str += '</li>'
+
+            output.innerHTML += str;
+
+        });
+
+        //メッセージ送信処理
+        send.addEventListener('click', function() {
+            //書き込み処理
+            newPostRef.ref(room).push({
+                username: username.value,
+                text: text.value,
+
+                time: time()
+
+            });
+            text.value = "";
+        });
+
+        //時間を取得
+        function time() {
+            var date = new Date();
+            var hh = ("0" + date.getHours()).slice(-2);
+            var min = ("0" + date.getMinutes()).slice(-2);
+            var sec = ("0" + date.getSeconds()).slice(-2);
+            var time = hh + ":" + min + ":" + sec;
+            return time;
+        }
+
+        //メッセージ削除
+        var parent;
+        var parentid;
+        var grandparent;
+        var grandparentid;
+
+        function deletemsg() {
+            parent = event.target.parentNode;
+            parentid = parent.id;
+            grandparent = parent.parentNode;
+            grandparentid = grandparent.id;
+            //削除処理
+            //newPostRef.ref(room).child(parentid).set(null);
+            newPostRef.ref(room).child(parentid).remove();
+            //DOMの削除
+            parent.parentNode.remove();
+        }
+
+        // newPostRef.ref(room).on("child_removed", function(data) {
+        //     newPostRef.ref(room).child(parentid).remove();
+        //     parent.parentNode.remove();
+        // });
+
+        newPostRef.ref(room).on("child_removed", function(snapshot) {
+            var deleted = snapshot.val();
+            var key = snapshot.key;
+            deletekey = document.getElementById("list" + key);
+            //DOMの削除
+            deletekey.remove();
+
+            //console.log(data.val());
+            // remove();
+            // console.log(deleted);
+        });
+
+        // newPostRef.ref(room).on("value", function(snapshot) {
+        //     const v = data.val(); //データ取得
+        //     const k = data.key; //ユニークkey取得
+        //     console.log(snapshot.val());
+        //     // snapshot.forEach(function(children) {
+        //     //     console.log(children.val().text)
+        //     // });
+        // });
+    </script>
+
+</body>
+
+</html>
