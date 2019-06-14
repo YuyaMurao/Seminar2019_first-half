@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>videoChat</title>
+    <link rel="stylesheet" href="css/chat_style.css">
+    <link rel="stylesheet" href="css/video_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Room</h1>
+        <p class="note">
+            Change Room mode (before join in a room):
+            <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+        </p>
+        <div class="room">
+            <div>
+                <video id="js-local-stream"></video>
+                <input type="text" placeholder="User Name" id="js-user-id">
+                <input type="text" placeholder="Room Name" id="js-room-id">
+                <button id="js-join-trigger">Join</button>
+                <button id="end-call" disabled=true>Leave</button>
+                <button id="remove_room" disabled=true>Leave and Delete All Chat</button>
+            </div>
+
+            <div class="remote-streams" id="js-remote-streams"></div>
+            <div id="output_div">
+                <ul id="output">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script type="text/javascript" src="./js/chatSpeech.js"></script>
+    <script type="text/javascript" src="./js/videochat.js"></script>
+
+
+
+</body>
+
+</html>
