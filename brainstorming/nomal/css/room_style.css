@@ -1,0 +1,126 @@
+body {
+    background: rgb(224, 138, 10);
+}
+
+#title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgb(224, 138, 10);
+    color: rgb(0, 0, 0);
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+}
+
+#exit_button {
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: solid 1px black;
+}
+
+#board {
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    border: solid 1px;
+    background: rgb(198, 203, 209);
+}
+
+.card-body {
+    height: 70vh;
+    overflow: auto;
+}
+
+.list {
+    height: calc(70vh + 40px);
+    border: solid 1px;
+    background: rgb(198, 203, 209);
+}
+
+.tag {
+    min-width: 20vw;
+    margin: 16px;
+    border: solid 1px black;
+}
+
+#tag_name,
+#tag_text,
+#tag_create_text {
+    border: solid 1px;
+}
+
+#tag_name {
+    width: 30vw;
+}
+
+.tag_name {
+    background: #42AAC7;
+    border: solid 2px black;
+}
+
+#tag_text {
+    width: 50vw;
+}
+
+#send_button {
+    padding: 6px 17px;
+}
+
+.text_send {
+    margin-top: 40px;
+    display: inline-block;
+    width: 106px;
+}
+
+.text_create {
+    display: inline-block;
+    width: 106px;
+    text-align: right;
+}
+
+#tag_create_text {
+    width: 30vw;
+}
+
+.send {
+    margin-left: 15px;
+}
+
+.row {
+    /* これがないとbodyが横にはみ出す */
+    margin: 0;
+}
+
+.tag_text,
+.speaker {
+    width: 100%;
+}
+
+#error_text_send,
+error_text_create {
+    height: 24px;
+}
+
+
+/*スクロールバーの幅*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+/*スクロールバーのレール*/
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #eee;
+}
+
+
+/*スクロールバーのつまみ*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #808080;
+}

@@ -1,0 +1,42 @@
+{
+  "理想ルーム名": {
+    "board": {
+      "a": {
+        "tag_name": "a",
+        "text_list": {
+          "aghwg": {
+            "text": "a",
+            "user_name": "a"
+          },
+          "sagwsgws": {
+            "text": "b",
+            "user_name": "b"
+          }
+        }
+      },
+      "b": {
+        "tag_name": "b",
+        "text_list": {
+          "rhaerhaf": {
+            "text": "d",
+            "user_name": "d"
+          },
+          "sghawhgaweh": {
+            "text": "c",
+            "user_name": "c"
+          }
+        }
+      }
+    },
+    "password": "a",
+    "room_name": "あ",
+    "user_list": {
+      "あ": {
+        "user_name": "あ"
+      },
+      "い": {
+        "user_name": "い"
+      }
+    }
+  }
+}

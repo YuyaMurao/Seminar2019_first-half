@@ -1,0 +1,102 @@
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    font-weight: bold;
+    font-size: 50px;
+    color: #212121
+}
+
+#title {
+    margin: auto;
+    font-weight: bold;
+    border-bottom: solid 1px #FFF;
+    color: #FFF;
+    width: 30vw;
+    font-size: 2.25em;
+}
+
+#wrap {
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* button */
+
+#CreateNewRoom_button,
+#JoinRoom_button {
+    display: inline-block;
+    padding: 0.3em 0em;
+    text-decoration: none;
+    background-color: #1BA466;
+    color: #FFF;
+    border: solid 2px #333;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+#CreateNewRoom_button:hover,
+#JoinRoom_button:hover {
+    background: #B3CF3F;
+    color: white;
+}
+
+
+/* form */
+
+#form-div {
+    width: 40vw;
+    height: 60vh;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    border: solid 2px;
+    border-color: #333;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_name,
+.text,
+.password {
+    margin: 10px 10px;
+    width: 60%;
+}
+
+.submit {
+    margin: 25px 0px 10px 0px;
+    width: 100%;
+}
+
+.label {
+    text-align: left;
+    color: #FAFAFA;
+    margin: 0 5%;
+}
+
+.submit_button {
+    margin: 0 10px;
+    width: 25%;
+}
+
+#error_msg {
+    height: 24px;
+    color: #FAFAFA;
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+}

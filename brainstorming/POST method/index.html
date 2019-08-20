@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brainstorming Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div id="wrap">
+        <div id="title">オンラインブレスト</div>
+        <div id="form-main">
+            <div id="form-div">
+                <form id="form">
+
+                    <p class="user_name">
+                        <input name="user_name" type="text" class="user_name_text" placeholder="User Name" id="user_name" value="" />
+                    </p>
+
+                    <p class="text">
+                        <input name="room_name" type="text" class="room_name_text" id="room_name" placeholder="Room Name" value="" />
+                    </p>
+
+                    <p class="password">
+                        <input type="password" placeholder="Password" id="room_password" value="" />
+                    </p>
+
+
+                    <div class="submit">
+                        <input type="button" value="CreateNewRoom" id="CreateNewRoom_button" />
+                        <input type="button" value="JoinRoom" id="JoinRoom_button" />
+                    </div>
+                </form>
+                <div id="error_msg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+    <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="js/firebase_config.js"></script>
+
+    <script src="js/login_room.js"></script>
+</body>
+
+</html>
